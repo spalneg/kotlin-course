@@ -228,7 +228,8 @@ fun checkFail(dict: Map<String, String>) {
 //Отфильтруйте словарь с результатами тестирования сервисов, оставив только те тесты, которые не прошли успешно и содержат в названии “optional”.
 fun filterOptions(){
     val dict =  mapOf("test1" to "failed", "test2 optional" to "failed", "test3 optional" to "passed", "test4 optional" to "skipped")
-    val newDict = dict.filterNot { it.value == "passed" }.filter { it.key.contains("optional") }
+    val newDict = dict.filterNot { it.value == "passed" }
+        .filter { it.key.contains("optional") }
     println(newDict)
 
 }
