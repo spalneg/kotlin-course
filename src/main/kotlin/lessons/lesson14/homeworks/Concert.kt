@@ -8,8 +8,9 @@ class Concert(
     val place: String,
     val price: Double,
     val capacity: Int,
-    private var sold: Int = 0
+
 ) {
+    private var sold: Int = 0
     fun info(){
         println("Концерт группы $group будет проводиться в $place , стоимость билета $price, вместимость зала $capacity человек.")
     }
